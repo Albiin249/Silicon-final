@@ -1,15 +1,62 @@
-h2 {
-    font-size: 40px;
+#features {
+    
+    display: flex;
+    max-width: 100%;
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media (min-width: 1300px) {
+        max-width: 1300px;
+        height: 90svh;
+    }
 }
 
+h2 {
+    font-size: 28px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        font-size: 33px;
+    }
+    @media (min-width: 1300px) {
+        font-size: 40px;
+        text-align: left;
+    }
+}
+
+
+
 .app-features {
+    max-width: 690px;
+    
+
+    .features-p {
+        text-align: center;
+        
+        max-width: 100%;
+    
+        
+        @media (min-width: 1300px) {
+            max-width: 746px;
+            text-align: left;
+        }
+    
+    }
+    
     p {
         color: var(--clr-gray600);
-        width: 746px;
+       
+    }
+
+    @media (min-width: 1300px) {
+        max-width: 746px;
+        text-align: left;
+        margin-top: 2rem;
     }
 }
 
 aside {
+    display: none;
     margin-top: 4rem;
     .iphone {
         
@@ -19,4 +66,18 @@ aside {
         bottom: 61.5%;
         left: 3.5%;
     }
+    @media (min-width: 1300px) {
+        display: block;
+    }
 }
+
+.box-desktop {
+    display: none;
+    @media (min-width: 1300px) {
+        display: flex;
+    }
+}
+
+
+
+

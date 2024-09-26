@@ -43,49 +43,88 @@
 
 /*LISTA FÖR FEATURES SIDAN */
 
-.lista {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 746px;
-  height: 450px;
- 
-  
 
-  .listitem { 
+.lista {
+  margin-bottom: 2rem;
+  .listitem {
+    display: flex;
+    gap: 1em;
+  }
+  .text {
+    width: 280px;
+    p {
+      margin-top: -10px;
+  }
+  }
+  .box-2 {
+    margin-top: 1rem;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 746px;
+    height: 450px;
+    margin-bottom: 2rem;
+    
+  
+    .listitem { 
+    
       display: flex;
       gap: 1em;
-      align-items: center;
+      align-items: flex-start;
+      
+      .box-2 {
+        margin-top: 0;
+      }
       
       p {
           width: 265px;
-          margin-top: 0;
-          padding-top: 0.5rem;
+          margin-top: -10px;
       }
       
       h3 {
-          font-size: 20px;
-          margin-top: 3rem;
-          margin-bottom: 0.5em;
-          padding-top: 1rem;
+        font-size: 20px;
+        text-align: start;
+          
       }
       .text {
           display: flex;
           flex-direction: column;
-          gap: 0;
+          align-self: flex-start;
+          margin-top: -20px;
           
       }
+       
+    }
+    .listitem-right {
+    
+    }
+    .listitem-bottom {
+      position: relative;
+      
+      
+    }
+    .listitem-bottom-2 {
+      position: relative;
+      
+      
+    }
+  }
+  .lista {
+    margin-top: 3rem;
+  }
+}
+
+
+@media (min-width: 1300px) {
+  .lista {
+    margin-top: 4rem;
   }
   .listitem-right {
-    margin-left: 1.5rem;
-  }
-  .listitem-bottom {
-    position: relative;
-    bottom: 20%;
-    
-  }
-  .listitem-bottom-2 {
-    position: relative;
-    bottom: 40%;
-    
+    margin-left: 3rem;
   }
 }
