@@ -1,0 +1,91 @@
+
+
+
+/* POPOUT MENY SKAPAD MED HJÄLP AV CHATGPT */
+.popout-menu {
+    display: none; // Dold som standard
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    width: 150px;
+    
+
+    ul {
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+
+      li {
+        padding: 10px 20px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+      }
+    }
+}
+
+.popout-menu.show {
+    display: block; // Visas när "show"-klassen är tillagd
+}
+
+
+
+/*LISTA FÖR FEATURES SIDAN */
+
+.lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 746px;
+  height: 450px;
+ 
+  
+
+  .listitem { 
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      
+      p {
+          width: 265px;
+          margin-top: 0;
+          padding-top: 0.5rem;
+      }
+      
+      h3 {
+          font-size: 20px;
+          margin-top: 3rem;
+          margin-bottom: 0.5em;
+          padding-top: 1rem;
+      }
+      .text {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          
+      }
+  }
+  .listitem-right {
+    margin-left: 1.5rem;
+  }
+  .listitem-bottom {
+    position: relative;
+    bottom: 20%;
+    
+  }
+  .listitem-bottom-2 {
+    position: relative;
+    bottom: 40%;
+    
+  }
+}

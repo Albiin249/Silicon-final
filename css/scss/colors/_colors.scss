@@ -1,0 +1,27 @@
+:root {
+    --clr-primary: #6366F1;
+    --clr-gradient: var(clr-primary (s0 h50 l100));
+
+    --clr-gray100: #F3F6FF;
+    --clr-gray200: #EFF2FC;
+    --clr-gray300: #E2E5F1;
+    --clr-gray400: #D4D7E5;
+    --clr-gray500: #B4B7C9;
+    --clr-gray600: #9397AD;
+    --clr-gray700: #565973;
+    --clr-gray800: #33354D;
+    --clr-gray900: #0B0F19;
+
+    --clr-bg: white;
+    --clr-bg-100: var(--clr-gray100);
+    
+
+    --clr-rubrik: var(--clr-gray900);
+    --clr-body: var(--clr-gray700);
+    --clr-btn-app: var(--clr-gray900);
+
+    --clr-btn-circle-closed: white;
+
+    --clr-box-2: #F3F6FF;
+    
+}
