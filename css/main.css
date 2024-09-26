@@ -88,6 +88,9 @@ body {
   font-weight: 600;
   transition: box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {
@@ -140,6 +143,12 @@ body {
 .btn-googleplay .googleplay-text .get {
   width: 45px;
   height: 7px;
+}
+
+.btn-learn {
+  width: 160px;
+  height: 44px;
+  gap: 10px;
 }
 
 /* KNAPP FÖR DARKMODE */
@@ -845,5 +854,87 @@ aside .card {
     display: block;
     text-align: center;
     margin-bottom: 4rem;
+  }
+}
+
+#bank-info {
+  display: none;
+}
+
+@media (min-width: 1300px) {
+  #bank-info {
+    display: block;
+  }
+  .moneytransfer {
+    margin-left: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "transfer images" "contacts international";
+  }
+  .moneytransfer .transfer {
+    grid-area: transfer;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-top: 10rem;
+  }
+  .moneytransfer .transfer h3 {
+    font-size: 32px;
+    width: 416px;
+  }
+  .moneytransfer .transfer .transfer-info {
+    display: flex;
+    gap: 1em;
+  }
+  .moneytransfer .transfer .transfer-info p {
+    margin: 5px;
+  }
+  .moneytransfer .transfer .transfer-margin {
+    margin-bottom: 2rem;
+  }
+  .moneytransfer .images {
+    grid-area: images;
+    margin-left: 14rem;
+    margin-top: 7rem;
+  }
+  .moneytransfer .images .inner {
+    position: absolute;
+    z-index: 1;
+  }
+  .moneytransfer .images .outer {
+    position: relative;
+    z-index: 3;
+    left: 42%;
+    top: 82%;
+  }
+  .moneytransfer .contacts-images {
+    grid-area: contacts;
+    margin-left: 1rem;
+    margin-top: 12rem;
+  }
+  .moneytransfer .contacts-images .contacts {
+    position: absolute;
+  }
+  .moneytransfer .contacts-images .card-2 {
+    position: relative;
+    top: 28%;
+    left: 33%;
+  }
+  .moneytransfer .international {
+    grid-area: international;
+    margin-top: 13rem;
+    margin-left: 12rem;
+    width: 526px;
+    height: 362px;
+  }
+  .moneytransfer .international .payments-2 {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3.5rem;
+  }
+  .moneytransfer .international h3 {
+    font-size: 32px;
+  }
+  .moneytransfer .international .btn-payment {
+    margin-top: 2rem;
   }
 }
