@@ -373,6 +373,15 @@ a:hover {
   border-radius: 0.5em;
 }
 
+.box-3 {
+  width: 416px;
+  height: 329px;
+  background-color: white;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --clr-primary: #6366F1;
   --clr-gradient: var(clr-primary (s0 h50 l100));
@@ -673,7 +682,7 @@ header {
 @media (min-width: 1300px) {
   #features {
     max-width: 1300px;
-    height: 90svh;
+    height: 880px;
   }
 }
 
@@ -857,84 +866,151 @@ aside .card {
   }
 }
 
-#bank-info {
-  display: none;
+.fourth-page {
+  background-color: var(--clr-bg);
 }
 
+.fourth-page {
+  display: none;
+}
 @media (min-width: 1300px) {
-  #bank-info {
+  .fourth-page {
     display: block;
   }
-  .moneytransfer {
-    margin-left: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "transfer images" "contacts international";
+}
+
+#bank-info {
+  display: block;
+}
+
+.moneytransfer {
+  margin-left: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "transfer images" "contacts international";
+}
+.moneytransfer .transfer {
+  grid-area: transfer;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-top: 10rem;
+}
+.moneytransfer .transfer h3 {
+  font-size: 32px;
+  width: 416px;
+}
+.moneytransfer .transfer .transfer-info {
+  display: flex;
+  gap: 1em;
+}
+.moneytransfer .transfer .transfer-info p {
+  margin: 5px;
+}
+.moneytransfer .transfer .transfer-margin {
+  margin-bottom: 2rem;
+}
+.moneytransfer .images {
+  grid-area: images;
+  margin-left: 14rem;
+  margin-top: 7rem;
+}
+.moneytransfer .images .inner {
+  position: absolute;
+  z-index: 1;
+}
+.moneytransfer .images .outer {
+  position: relative;
+  z-index: 3;
+  left: 42%;
+  top: 82%;
+}
+.moneytransfer .contacts-images {
+  grid-area: contacts;
+  margin-left: 1rem;
+  margin-top: 12rem;
+}
+.moneytransfer .contacts-images .contacts {
+  position: absolute;
+}
+.moneytransfer .contacts-images .card-2 {
+  position: relative;
+  top: 18%;
+  left: 33%;
+}
+.moneytransfer .international {
+  grid-area: international;
+  margin-top: 13rem;
+  margin-left: 12rem;
+  margin-bottom: 12rem;
+  width: 526px;
+  height: 362px;
+}
+.moneytransfer .international .payments-2 {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3.5rem;
+}
+.moneytransfer .international h3 {
+  font-size: 32px;
+}
+.moneytransfer .international .btn-payment {
+  margin-top: 2rem;
+}
+
+.fifth-page {
+  background-color: var(--clr-bg-100);
+}
+
+.fifth-page {
+  display: none;
+}
+@media (min-width: 1300px) {
+  .fifth-page {
+    display: block;
   }
-  .moneytransfer .transfer {
-    grid-area: transfer;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-top: 10rem;
-  }
-  .moneytransfer .transfer h3 {
-    font-size: 32px;
-    width: 416px;
-  }
-  .moneytransfer .transfer .transfer-info {
-    display: flex;
-    gap: 1em;
-  }
-  .moneytransfer .transfer .transfer-info p {
-    margin: 5px;
-  }
-  .moneytransfer .transfer .transfer-margin {
-    margin-bottom: 2rem;
-  }
-  .moneytransfer .images {
-    grid-area: images;
-    margin-left: 14rem;
-    margin-top: 7rem;
-  }
-  .moneytransfer .images .inner {
-    position: absolute;
-    z-index: 1;
-  }
-  .moneytransfer .images .outer {
-    position: relative;
-    z-index: 3;
-    left: 42%;
-    top: 82%;
-  }
-  .moneytransfer .contacts-images {
-    grid-area: contacts;
-    margin-left: 1rem;
-    margin-top: 12rem;
-  }
-  .moneytransfer .contacts-images .contacts {
-    position: absolute;
-  }
-  .moneytransfer .contacts-images .card-2 {
-    position: relative;
-    top: 28%;
-    left: 33%;
-  }
-  .moneytransfer .international {
-    grid-area: international;
-    margin-top: 13rem;
-    margin-left: 12rem;
-    width: 526px;
-    height: 362px;
-  }
-  .moneytransfer .international .payments-2 {
-    margin-top: 2rem;
-    display: flex;
-    gap: 3.5rem;
-  }
-  .moneytransfer .international h3 {
-    font-size: 32px;
-  }
-  .moneytransfer .international .btn-payment {
-    margin-top: 2rem;
-  }
+}
+
+#recensions {
+  display: flex;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  gap: 2rem;
+}
+#recensions h2 {
+  font-size: 40px;
+  margin-top: -1rem;
+  width: 350px;
+}
+
+.box-3 {
+  padding: 1rem;
+}
+
+.fannie-box {
+  margin-left: 4rem;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: column;
+}
+.imgs .quotes {
+  position: relative;
+  top: -60%;
+  height: 44px;
+  width: 44px;
+}
+.imgs .ratings {
+  width: 88px;
+  height: 16px;
+}
+
+.fannie {
+  display: flex;
+  gap: 1em;
+}
+.fannie .text-fannie h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: -0.5rem;
 }

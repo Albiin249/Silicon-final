@@ -1,11 +1,10 @@
-.fourth-page {
-    background-color: var(--clr-bg);
+.fifth-page {
+    background-color: var(--clr-bg-100);
 }
-
-.fourth-page {
+.fifth-page {
     display: none;
-
     @media (min-width: 1300px) {
         display: block;
     }
+
 }
