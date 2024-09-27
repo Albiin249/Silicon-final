@@ -20,7 +20,7 @@
     
 }
 .btn:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Skugga vid hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
 }
 
 .signin-btn {
@@ -81,6 +81,35 @@
 }
 
 
+
+
+.knappen {
+        
+    width: 114px;
+    height: 52px;
+    color: white;
+    background-color: var(--clr-primary);
+    font-size: 16px;
+    font-weight: 600;
+    
+    border: 0;
+    border-radius: 0 .5em .5em 0;
+    cursor: pointer;
+
+    @media (min-width: 1400px) {
+        width: 142px;
+        
+    }
+}
+.knappen:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.contact-btn {
+    width: 162px;
+    height: 50px;
+}
+
 /* KNAPP FÖR DARKMODE */
 
 .btn-toggle-switch {
@@ -138,3 +167,6 @@
 .toggle-switch .slider.round:before {
     border-radius: 50%;
 }
+
+
+
