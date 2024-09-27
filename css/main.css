@@ -380,6 +380,7 @@ a:hover {
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 :root {
@@ -997,12 +998,14 @@ aside .card {
 .imgs .quotes {
   position: relative;
   top: -60%;
-  height: 44px;
-  width: 44px;
+  height: 45px;
+  width: 45px;
 }
 .imgs .ratings {
+  position: relative;
   width: 88px;
   height: 16px;
+  top: -10%;
 }
 
 .fannie {
