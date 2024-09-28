@@ -349,7 +349,8 @@ body {
 }
 @media (min-width: 1300px) {
   .info-lista {
-    grid-area: info-lista;
+    margin-top: 5rem;
+    margin-right: 0;
   }
 }
 .info-lista details {
@@ -374,8 +375,6 @@ body {
   margin-right: 1.5rem;
   list-style: none;
   font-size: 16px;
-  color: var(--clr-rubrik);
-  font-weight: 800;
 }
 .info-lista details summary::after {
   content: "";
@@ -410,8 +409,11 @@ body {
 }
 .info-lista details p {
   margin-top: 1rem;
-  color: var(--clr-gray700);
-  font-size: 14px;
+}
+@media (min-width: 1300px) {
+  .info-lista details p {
+    width: auto;
+  }
 }
 
 a {
@@ -1135,9 +1137,13 @@ aside .card {
   align-items: center;
   justify-content: center;
 }
+
 @media (min-width: 1300px) {
-  #faq {
+  .questions {
     max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "questions-2 info-lista" "subscribe subscribe";
   }
 }
 
@@ -1148,7 +1154,7 @@ aside .card {
 .questions .mobile-p {
   text-align: center;
 }
-.questions .desktop-h2, .questions .desktop-p, .questions .tablet-p {
+.questions .desktop-tablet-h2, .questions .desktop-tablet-p {
   display: none;
 }
 
@@ -1172,11 +1178,11 @@ aside .card {
   .questions .mobile-h2, .questions .mobile-p, .questions .btn-contact {
     display: none;
   }
-  .questions .desktop-h2 {
+  .questions .desktop-tablet-h2 {
     display: block;
     font-size: 32px;
   }
-  .questions .tablet-p {
+  .questions .desktop-tablet-p {
     display: block;
     text-align: center;
   }
@@ -1193,12 +1199,31 @@ aside .card {
   }
 }
 @media (min-width: 1300px) {
-  .questions p {
-    width: 416px;
+  .questions-2 {
+    margin-top: 5rem;
+    width: 417px;
+    height: 380px;
+    grid-area: questions-2;
+  }
+  .questions-2 .desktop-tablet-p {
+    text-align: left;
+  }
+  .questions-2 .desktop-tablet-h2 {
+    display: inline;
   }
   .contact-boxes {
     display: flex;
     gap: 1em;
+  }
+  .contact-boxes-tablet {
+    display: none;
+  }
+  .info-lista {
+    width: 746px;
+    grid-area: info-lista;
+  }
+  .subscribe {
+    grid-area: subscribe;
   }
 }
 .subscribe {
@@ -1218,6 +1243,12 @@ aside .card {
     width: 712px;
     display: flex;
     align-items: center;
+  }
+}
+@media (min-width: 1300px) {
+  .subscribe {
+    width: 1280px;
+    justify-content: center;
   }
 }
 .subscribe .bell-text {
@@ -1243,6 +1274,17 @@ aside .card {
   width: 78px;
   height: 78px;
 }
+@media (min-width: 1300px) {
+  .subscribe .bell-text .mobile-h3 {
+    display: none;
+  }
+  .subscribe .bell-text .desktop-h3 {
+    display: block;
+    font-size: 24px;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+  }
+}
 .subscribe .input-grp {
   margin-top: 2rem;
   margin-left: 1rem;
@@ -1258,11 +1300,9 @@ aside .card {
     margin-top: 1.5rem;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .subscribe .input-grp {
     width: 472px;
-    height: 45px;
-    top: 40%;
     margin-left: 3rem;
   }
 }
@@ -1288,78 +1328,6 @@ aside .card {
   width: 220px;
 }
 @media (min-width: 1400px) {
-  .subscribe .form-input {
-    width: 330px;
-  }
-}
-
-@media (min-width: 1300px) {
-  .subscribe {
-    width: 1280px;
-    height: 222px;
-    background-color: var(--clr-bg-100);
-    display: flex;
-  }
-  .subscribe .bell-text {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-  .subscribe .bell-text h3 {
-    font-size: 24px;
-  }
-  .subscribe .bell-text .bell {
-    margin-left: 4rem;
-    width: 78px;
-    height: 78px;
-  }
-  .subscribe .input-grp {
-    margin-left: 1rem;
-    display: flex;
-    position: relative;
-    width: 334px;
-    height: 52px;
-  }
-}
-@media (min-width: 1300px) and (min-width: 768px) {
-  .subscribe .input-grp {
-    width: 472px;
-    height: 45px;
-    top: 28%;
-  }
-}
-@media (min-width: 1300px) and (min-width: 1400px) {
-  .subscribe .input-grp {
-    width: 472px;
-    height: 45px;
-    top: 40%;
-    margin-left: 3rem;
-  }
-}
-@media (min-width: 1300px) {
-  .subscribe .input-grp input[type=email]:focus {
-    outline: 1px solid var(--clr-gray400);
-  }
-  .subscribe .input-grp ::-moz-placeholder {
-    color: var(--clr-gray500);
-  }
-  .subscribe .input-grp ::placeholder {
-    color: var(--clr-gray500);
-  }
-  .subscribe .email-icon {
-    position: absolute;
-    padding-left: 3rem;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .subscribe .form-input {
-    border: 1px solid var(--clr-gray400);
-    border-radius: 0.5em 0 0 0.5em;
-    padding-left: 2.5rem;
-    width: 220px;
-  }
-}
-@media (min-width: 1300px) and (min-width: 1400px) {
   .subscribe .form-input {
     width: 330px;
   }

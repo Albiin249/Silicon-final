@@ -19,6 +19,11 @@
         display: flex;
         align-items: center;
         
+    } 
+    @media (min-width: 1300px) {
+        width: 1280px;
+        justify-content: center;
+        
     }
     
     .bell-text {
@@ -45,6 +50,21 @@
             width: 78px;
             height: 78px;
         }
+        @media (min-width: 1300px) {
+
+            .bell {
+
+            }
+            .mobile-h3 {
+                display: none;
+            }
+            .desktop-h3 {
+                display: block;
+                font-size: 24px;
+                margin-top: 2.5rem;
+                margin-left: 1rem;
+            }
+        }
     }
 
     .input-grp {
@@ -61,10 +81,8 @@
             margin-top: 1.5rem;
         }
     
-        @media (min-width: 1400px) {
+        @media (min-width: 1300px) {
             width: 472px;
-            height: 45px;
-            top: 40%;
             margin-left: 3rem;
         }
     
@@ -96,97 +114,9 @@
             
         }
         
-    
-        
+
     
     }
 
 
 }
-
-
-@media (min-width: 1300px) {
-    .subscribe {
-        width: 1280px;
-        height: 222px;
-        background-color: var(--clr-bg-100);
-        display: flex;
-        .bell-text {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-
-            h3 {
-                font-size: 24px;
-            }
-
-            .bell {
-                margin-left: 4rem;
-                width: 78px;
-                height: 78px;
-            }
-        }
-
-        .input-grp {
-            margin-left: 1rem;
-            display: flex;
-            position: relative;
-            width: 334px;
-            height: 52px;
-
-            @media (min-width: 768px) {
-                width: 472px;
-                height: 45px;
-                top: 28%;
-
-            }
-
-            @media (min-width: 1400px) {
-                width: 472px;
-                height: 45px;
-                top: 40%;
-                margin-left: 3rem;
-            }
-
-            input[type=email]:focus{
-                outline: 1px solid var(--clr-gray400);     
-              }
-            ::placeholder {
-                color: var(--clr-gray500);
-            }
-        }
-
-        .email-icon {
-            position: absolute;
-            padding-left: 3rem;
-            top: 50%;
-
-            transform: translate(-50%, -50%);
-        }
-
-        .form-input {
-            border: 1px solid var(--clr-gray400);
-            border-radius: .5em 0 0 .5em;
-            padding-left: 2.5rem;
-            width: 220px;
-
-            @media (min-width: 1400px) {
-                width: 330px;
-
-
-            }
-
-        
-
-
-        }
-
-
-
-
-
-    }
-
-}
-
-

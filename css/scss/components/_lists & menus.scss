@@ -135,15 +135,17 @@
 
 .info-lista {
    
-  @media (min-width: 1300px) {
-        grid-area: info-lista;
-    }
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-right: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media (min-width: 1300px) {
+      margin-top: 5rem;
+      margin-right: 0;
+    }
 
     details {
         position: relative;
@@ -167,8 +169,7 @@
         margin-right: 1.5rem;
         list-style: none;
         font-size: 16px;
-        color: var(--clr-rubrik);
-        font-weight: 800;
+       
         
 
     }
@@ -216,7 +217,9 @@
 
       details p {
         margin-top: 1rem;
-        color: var(--clr-gray700);
-        font-size: 14px;
+
+        @media (min-width: 1300px) {
+          width: auto;
+        }
     }
 }
