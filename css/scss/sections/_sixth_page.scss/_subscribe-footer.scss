@@ -1,7 +1,7 @@
 
 
 .subscribe {
-    margin-bottom: 3rem;
+    
     border-radius: .5em;
 
     .desktop-h3 {
@@ -14,7 +14,6 @@
 
     @media (min-width: 768px) {
         margin-top: 3rem;
-        margin-bottom: 2rem;
         width: 712px;
         display: flex;
         align-items: center;
@@ -87,10 +86,10 @@
         }
     
         input[type=email]:focus{
-            outline: 1px solid var(--clr-gray400);     
+            outline: 1px solid var(--clr-input-border);     
           }
         ::placeholder {
-            color: var(--clr-gray500);
+            color: var(--clr-placeholder);
         }
     }
 
@@ -103,7 +102,7 @@
     }
 
     .form-input {
-        border: 1px solid var(--clr-gray400);
+        border: 1px solid var(--clr-input-border);
         border-radius: .5em 0 0 .5em;
         padding-left: 2.5rem;
         width: 220px;

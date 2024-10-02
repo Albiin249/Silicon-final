@@ -50,12 +50,14 @@
     .message {
         a {
             color: #22C55E;
+           
         }
     }
     
 }
 
 @media (min-width: 768px) {
+    
     .questions {
         .mobile-h2, .mobile-p, .btn-contact {
             display: none;
@@ -85,6 +87,7 @@
 }
 
 @media (min-width: 1300px) {
+    
     .questions-2 {
         margin-top: 5rem;
         

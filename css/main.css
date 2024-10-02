@@ -63,7 +63,7 @@ body {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 768px;
   }
 }
 @media (min-width: 1400px) {
@@ -271,7 +271,7 @@ body {
   display: block;
 }
 
-/*LISTA FÖR FEATURES SIDAN */
+/*LISTA FÖR FEATURES SIDAN - SIDA 2*/
 .lista {
   margin-bottom: 2rem;
 }
@@ -354,8 +354,9 @@ body {
   }
 }
 .info-lista details {
+  background-color: var(--clr-bg-details);
   position: relative;
-  border: 1px solid var(--clr-gray300);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.5em;
   padding: 1rem;
   width: 366px;
@@ -375,6 +376,7 @@ body {
   margin-right: 1.5rem;
   list-style: none;
   font-size: 16px;
+  font-weight: 600;
 }
 .info-lista details summary::after {
   content: "";
@@ -388,7 +390,7 @@ body {
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  top: 10px;
+  top: 8px;
   right: 1.8%;
 }
 .info-lista details[open] summary::after {
@@ -405,7 +407,7 @@ body {
   position: absolute;
   border-radius: 50%;
   right: 1.8%;
-  top: 10px;
+  top: 8px;
 }
 .info-lista details p {
   margin-top: 1rem;
@@ -455,16 +457,22 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: transparent;
   width: 196px;
   height: 100px;
-  border: 1px solid var(--clr-gray300);
+  border: 1px solid var(--clr-box1-4-border);
   border-radius: 0.5em;
 }
 @media (min-width: 768px) {
   .box {
     width: 158px;
     height: 98px;
+  }
+}
+@media (min-width: 1300px) {
+  .box {
+    width: 196px;
+    height: 100px;
   }
 }
 
@@ -481,7 +489,7 @@ a:hover {
 .box-3 {
   width: 416px;
   height: 329px;
-  background-color: white;
+  background-color: var(--clr-box-3);
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
@@ -489,7 +497,7 @@ a:hover {
 }
 
 .box-4 {
-  border: 1px solid var(--clr-gray300);
+  border: 1px solid var(--clr-box1-4-border);
   border-radius: 0.5em;
   width: 196px;
   height: 166px;
@@ -510,11 +518,56 @@ a:hover {
   --clr-gray900: #0B0F19;
   --clr-bg: white;
   --clr-bg-100: var(--clr-gray100);
+  --clr-features: var(--clr-gray800);
   --clr-rubrik: var(--clr-gray900);
   --clr-body: var(--clr-gray700);
   --clr-btn-app: var(--clr-gray900);
   --clr-btn-circle-closed: white;
-  --clr-box-2: #F3F6FF;
+  --clr-box1-4-border: var(--clr-gray300);
+  --clr-box-2: rgb(99, 102, 241, 0.08);
+  --clr-box-3: white;
+  --clr-fanniealbert-p: var(--clr-gray600);
+  --clr-bg-details: white;
+  --clr-input-border: var(--clr-gray400);
+  --clr-placeholder: var(--clr-gray500);
+  --clr-footer: var(--clr-gray600);
+}
+:root .show-dark {
+  display: none;
+}
+
+html {
+  color-scheme: light;
+}
+
+/* ------------- DARK MODE ------------- */
+.dark {
+  color-scheme: dark;
+  --clr-bg: var(--clr-gray900);
+  --clr-bg-100: rgba(255, 255, 255, 0.04);
+  --clr-rubrik: white;
+  --clr-body: rgba(255, 255, 255, 0.7);
+  --clr-features: rgba(255, 255, 255, 0.85);
+  --clr-btn-app: var(--clr-gray200);
+  --clr-btn-circle-closed: rgba(255, 255, 255, 0.05);
+  --clr-box1-4-border: rgba(255, 255, 255, 0.15);
+  --clr-box-2: rgb(243, 246, 255, 0.08);
+  --clr-box-3: rgb(255, 255, 255, 0.04);
+  --clr-fanniealbert-p: rgba(255, 255, 255, 0.5);
+  --clr-bg-details: rgba(255, 255, 255, 0.04);
+  --clr-input-border: rgba(255, 255, 255, 0.18);
+  --clr-placeholder: rgba(255, 255, 255, 0.18);
+  --clr-footer: rgba(255, 255, 255, 0.5);
+}
+.dark .show-light {
+  display: none;
+}
+.dark .show-dark {
+  display: block;
+}
+.dark details summary::after {
+  background-image: url("/images/chevron-darkmode.svg");
+  background-size: 24px;
 }
 
 nav {
@@ -527,14 +580,14 @@ nav .features {
   display: none;
   margin-left: 2rem;
   font-weight: 600;
-  color: var(--clr-gray800);
+  color: var(--clr-features);
 }
 nav .btn-toggle-switch {
   margin-left: auto;
   margin-right: 1rem;
 }
 nav .btn-toggle-switch .label {
-  color: var(--clr-body);
+  color: var(--clr-gray700);
   font-weight: 600;
   display: none;
 }
@@ -616,6 +669,7 @@ nav .signin-btn {
 }
 @media (min-width: 768px) {
   #showcase {
+    height: 618px;
     max-width: 720px;
     display: flex;
     align-items: center;
@@ -627,7 +681,7 @@ nav .signin-btn {
   }
   #showcase .left-side {
     justify-self: start;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
   #showcase .left-side h1 {
     display: none;
@@ -643,6 +697,7 @@ nav .signin-btn {
     display: none;
   }
   #showcase h1 {
+    margin-top: 3rem;
     display: block;
     font-weight: 800;
     width: 442px;
@@ -673,11 +728,15 @@ nav .signin-btn {
   #showcase .discover-more {
     grid-area: discover;
     justify-self: start;
+    margin-bottom: 7rem;
   }
   #showcase .iphones {
+    position: relative;
+    height: 417px;
     grid-area: phones;
     display: flex;
     justify-self: end;
+    bottom: 12.5%;
     overflow: hidden;
   }
   #showcase .iphones .iphone-front {
@@ -689,26 +748,25 @@ nav .signin-btn {
     width: 240px;
     position: relative;
     left: 21%;
-    top: 2.5rem;
     z-index: 4;
+    top: 2.5rem;
   }
 }
 @media (min-width: 1400px) {
   #showcase {
     max-width: 1300px;
-    height: 100%;
     margin-top: 8rem;
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left-side iphones" "left-side iphones" "discover-more iphones";
-    overflow: hidden;
   }
   #showcase h1 {
     display: none;
   }
   #showcase .left-side {
-    margin-bottom: 14rem;
+    position: relative;
+    bottom: 18%;
     grid-area: left-side;
   }
   #showcase .left-side .desktop-p {
@@ -747,6 +805,8 @@ nav .signin-btn {
     display: flex;
     width: auto;
     height: 702px;
+    position: relative;
+    bottom: 10.2%;
   }
   #showcase .iphones .iphone-front {
     height: 813px;
@@ -765,6 +825,11 @@ nav .signin-btn {
   background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
 }
 
+@media (min-width: 1400px) {
+  .first-page {
+    height: 876px;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -823,14 +888,17 @@ h2 {
   text-align: center;
   max-width: 100%;
 }
+@media (min-width: 768px) {
+  .app-features .features-p {
+    text-align: center;
+    align-items: center;
+  }
+}
 @media (min-width: 1300px) {
   .app-features .features-p {
     max-width: 746px;
     text-align: left;
   }
-}
-.app-features p {
-  color: var(--clr-gray600);
 }
 @media (min-width: 1300px) {
   .app-features {
@@ -896,8 +964,9 @@ aside .card {
 #howdoesitwork .desktop-p {
   display: none;
 }
-#howdoesitwork .h2 {
+#howdoesitwork h2 {
   font-size: 28px;
+  margin-bottom: 2rem;
 }
 #howdoesitwork .mobile-h3 {
   font-size: 22px;
@@ -1131,6 +1200,9 @@ aside .card {
   font-weight: 700;
   margin-bottom: -0.5rem;
 }
+.fannie .text-fannie p {
+  color: var(--clr-fanniealbert-p);
+}
 
 #faq {
   display: flex;
@@ -1227,7 +1299,6 @@ aside .card {
   }
 }
 .subscribe {
-  margin-bottom: 3rem;
   border-radius: 0.5em;
   width: 366px;
   height: 251px;
@@ -1239,7 +1310,6 @@ aside .card {
 @media (min-width: 768px) {
   .subscribe {
     margin-top: 3rem;
-    margin-bottom: 2rem;
     width: 712px;
     display: flex;
     align-items: center;
@@ -1307,13 +1377,13 @@ aside .card {
   }
 }
 .subscribe .input-grp input[type=email]:focus {
-  outline: 1px solid var(--clr-gray400);
+  outline: 1px solid var(--clr-input-border);
 }
 .subscribe .input-grp ::-moz-placeholder {
-  color: var(--clr-gray500);
+  color: var(--clr-placeholder);
 }
 .subscribe .input-grp ::placeholder {
-  color: var(--clr-gray500);
+  color: var(--clr-placeholder);
 }
 .subscribe .email-icon {
   position: absolute;
@@ -1322,7 +1392,7 @@ aside .card {
   transform: translate(-50%, -50%);
 }
 .subscribe .form-input {
-  border: 1px solid var(--clr-gray400);
+  border: 1px solid var(--clr-input-border);
   border-radius: 0.5em 0 0 0.5em;
   padding-left: 2.5rem;
   width: 220px;
@@ -1330,5 +1400,38 @@ aside .card {
 @media (min-width: 1400px) {
   .subscribe .form-input {
     width: 330px;
+  }
+}
+
+footer {
+  padding-bottom: 1rem;
+}
+
+footer .container {
+  font-size: 14px;
+  color: var(--clr-footer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  display: grid;
+}
+
+footer .credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -18px;
+}
+
+@media (min-width: 768px) {
+  footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .credit {
+    display: block;
+    margin-top: 14px;
   }
 }

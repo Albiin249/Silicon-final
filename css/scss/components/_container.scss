@@ -11,10 +11,11 @@
 
 .container {
     @include tablet {
-        max-width: 720px;
+        max-width: 768px;
     }
 
     @include desktop {
         max-width: 1300px;
     }
+    
 }

@@ -63,6 +63,7 @@ h1 {
 /* --------TABLET LÄGE-------- */
 
 @media (min-width: 768px) {
+    height: 618px;
     max-width: 720px;
     display: flex;
     align-items: center;
@@ -79,7 +80,7 @@ h1 {
     
     .left-side{
         justify-self: start;
-        margin-top: 3rem;
+        margin-top: 4rem;
         h1 {
             display: none;
         }
@@ -96,11 +97,13 @@ h1 {
     }
     
     h1 {
+        margin-top: 3rem;
         display: block;
         font-weight: 800;
         width: 442px;
         grid-area: h1;
         font-size: 44px;
+        
     }
     .app-btns {
         grid-area: buttons;
@@ -126,26 +129,34 @@ h1 {
     .discover-more {
         grid-area: discover;
         justify-self: start;
+        
+        margin-bottom: 7rem;
     }
 
     .iphones {
+        
+        position: relative;
+        height: 417px;
         grid-area: phones;
         display: flex;
         justify-self: end;
+        bottom: 12.5%;
         overflow: hidden;
-
+        
+        
         .iphone-front {
             width: 243px;
             position: relative;
             z-index: 30;
-
+            
+            
         }
         .iphone-back{
             width: 240px;
             position: relative;
             left: 21%;
-            top: 2.5rem;
             z-index: 4;
+            top: 2.5rem;
             
         }
     }
@@ -155,7 +166,6 @@ h1 {
 /* --------DESKTOPLÄGE-------- */
 @media (min-width: 1400px) {
     max-width: 1300px;
-    height: 100%;
     margin-top: 8rem;
     text-align: left;
     display: grid;
@@ -163,14 +173,14 @@ h1 {
     grid-template-areas: "left-side iphones"
                          "left-side iphones"
                          "discover-more iphones";
-    overflow: hidden;
     
   
     h1 {
         display: none;
     }
     .left-side {
-        margin-bottom: 14rem;
+        position: relative;
+        bottom: 18%;
         grid-area: left-side;
         .desktop-p {
             display: block;
@@ -205,15 +215,19 @@ h1 {
         display: flex;
         align-items: center;
         gap: 1em;
+        
     }
 
 
 
     .iphones {
+       
         grid-area: iphones;
         display: flex;
         width: auto;
         height: 702px;
+        position: relative;
+        bottom: 10.2%;
         
 
         .iphone-front {

@@ -11,6 +11,7 @@
 @import "./components/boxes";
 
 @import "./colors/colors";
+@import "./colors/darkmode";
 
 
 @import "./sections/_first-page.scss/nav";
@@ -31,7 +32,9 @@
 @import "./sections/_fifth-page.scss/section-clients";
 
 @import "./sections/_sixth_page.scss/sixth_page";
-@import "./sections/_sixth_page.scss/main-FAQ";
 @import "./sections/_sixth_page.scss/section-questions";
 @import "./sections/_sixth_page.scss/subscribe-footer";
+
+
+@import "./sections/footer.rights";
 
