@@ -293,9 +293,10 @@ body {
   .lista {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 746px;
+    width: 706px;
     height: 450px;
     margin-bottom: 2rem;
+    gap: 2em;
   }
   .lista .listitem {
     display: flex;
@@ -333,12 +334,9 @@ body {
   .lista {
     margin-top: 4rem;
   }
-  .listitem-right {
-    margin-left: 3rem;
-  }
 }
 /*--------LISTA PÅ SIDA 6---------*/
-/*LISTA GJORD MED HJÄLP AV CHATGPT*/
+/*LISTA GJORD MED LITE HJÄLP AV CHATGPT*/
 .info-lista {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -594,6 +592,9 @@ nav .btn-toggle-switch .label {
 nav .signin-btn {
   display: none;
 }
+nav .hamb-meny {
+  margin-right: 1rem;
+}
 @media (min-width: 768px) {
   nav .btn-toggle-switch {
     margin-right: 5rem;
@@ -737,6 +738,7 @@ nav .signin-btn {
     display: flex;
     justify-self: end;
     bottom: 12.5%;
+    left: 5%;
     overflow: hidden;
   }
   #showcase .iphones .iphone-front {
@@ -807,6 +809,7 @@ nav .signin-btn {
     height: 702px;
     position: relative;
     bottom: 10.2%;
+    left: 0;
   }
   #showcase .iphones .iphone-front {
     height: 813px;
@@ -882,17 +885,14 @@ h2 {
 }
 
 .app-features {
-  max-width: 690px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .app-features .features-p {
   text-align: center;
   max-width: 100%;
-}
-@media (min-width: 768px) {
-  .app-features .features-p {
-    text-align: center;
-    align-items: center;
-  }
 }
 @media (min-width: 1300px) {
   .app-features .features-p {
@@ -1208,6 +1208,7 @@ aside .card {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 @media (min-width: 1300px) {
@@ -1219,6 +1220,9 @@ aside .card {
   }
 }
 
+.questions {
+  padding-left: 1rem;
+}
 .questions .mobile-h2 {
   font-size: 24px;
   text-align: center;

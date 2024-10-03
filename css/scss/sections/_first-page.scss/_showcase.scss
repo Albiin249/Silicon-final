@@ -141,6 +141,7 @@ h1 {
         display: flex;
         justify-self: end;
         bottom: 12.5%;
+        left: 5%;
         overflow: hidden;
         
         
@@ -165,6 +166,7 @@ h1 {
 
 /* --------DESKTOPLÄGE-------- */
 @media (min-width: 1400px) {
+    
     max-width: 1300px;
     margin-top: 8rem;
     text-align: left;
@@ -228,6 +230,7 @@ h1 {
         height: 702px;
         position: relative;
         bottom: 10.2%;
+        left: 0;
         
 
         .iphone-front {

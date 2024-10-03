@@ -36,7 +36,7 @@
 }
 
 .popout-menu.show {
-    display: block; // Visas när "show"-klassen är tillagd
+    display: block; 
 }
 
 
@@ -68,9 +68,10 @@
   .lista {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 746px;
+    width: 706px;
     height: 450px;
     margin-bottom: 2rem;
+    gap: 2em;
     
   
     .listitem { 
@@ -102,9 +103,8 @@
       }
        
     }
-    .listitem-right {
     
-    }
+   
     .listitem-bottom {
       position: relative;
       
@@ -112,7 +112,6 @@
     }
     .listitem-bottom-2 {
       position: relative;
-      
       
     }
   }
@@ -125,15 +124,16 @@
 @media (min-width: 1300px) {
   .lista {
     margin-top: 4rem;
+    
   }
   .listitem-right {
-    margin-left: 3rem;
+    
   }
 }
 
 
 /*--------LISTA PÅ SIDA 6---------*/
-/*LISTA GJORD MED HJÄLP AV CHATGPT*/
+/*LISTA GJORD MED LITE HJÄLP AV CHATGPT*/
 
 .info-lista {
     margin-top: 3rem;

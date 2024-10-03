@@ -27,15 +27,16 @@ h2 {
 
 
 .app-features {
-    max-width: 690px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .features-p {
         text-align: center;
         max-width: 100%;
     
         @media (min-width: 768px) {
-            text-align: center;
-            align-items: center;
+           
         }
         
         @media (min-width: 1300px) {

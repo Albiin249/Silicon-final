@@ -27,6 +27,10 @@ nav {
         display: none;
     }
 
+    .hamb-meny {
+        margin-right: 1rem;
+    }
+
 
     /* MEDIA QUERIES FÖR TABLET */ 
     @media (min-width: 768px) {
@@ -36,6 +40,7 @@ nav {
                 display: block;
             }
         }
+        
     }
     
 
