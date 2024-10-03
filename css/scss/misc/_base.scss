@@ -9,7 +9,7 @@
 }
 
 *, *::before, *::after {
-    box-sizing: border-box; /* så att t.ex border räknas med i pixlar, */
+    box-sizing: border-box; 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -19,7 +19,7 @@ html, body, section, div, header, footer, main, aside, nav, blockquote {
 }
 
 img, svg {
-    vertical-align: middle; /*gör så att de utgår ifrån middel av bilder */
+    vertical-align: middle; 
 }
 
 body {
