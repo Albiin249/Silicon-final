@@ -39,6 +39,8 @@
 
     --clr-footer: var(--clr-gray600);
 
+    --clr-bg-menu: white;
+
     .show-dark {
         display: none;
     }
@@ -89,6 +91,7 @@ html {
 
     --clr-footer: rgba(255, 255, 255, 0.5);
 
+    --clr-bg-menu: rgb(46, 36, 36);
     
     details summary::after {
         background-image: url('/images/chevron-darkmode.svg');

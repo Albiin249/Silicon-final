@@ -244,7 +244,7 @@ body {
   position: absolute;
   top: 100%;
   right: 10px;
-  background-color: white;
+  background-color: var(--clr-bg-menu);
   border: 1px solid #ddd;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -261,7 +261,7 @@ body {
 }
 .popout-menu ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--clr-body);
 }
 .popout-menu ul li a:hover {
   background-color: #f1f1f1;
@@ -529,6 +529,7 @@ a:hover {
   --clr-input-border: var(--clr-gray400);
   --clr-placeholder: var(--clr-gray500);
   --clr-footer: var(--clr-gray600);
+  --clr-bg-menu: white;
 }
 :root .show-dark {
   display: none;
@@ -556,6 +557,7 @@ html {
   --clr-input-border: rgba(255, 255, 255, 0.18);
   --clr-placeholder: rgba(255, 255, 255, 0.18);
   --clr-footer: rgba(255, 255, 255, 0.5);
+  --clr-bg-menu: rgb(46, 36, 36);
 }
 .dark .show-light {
   display: none;
@@ -626,7 +628,7 @@ nav .hamb-meny {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* --------MOBIL LÄGE-------- */
+  /* --------MOBIL LÄGE SLUT-------- */
   /* --------TABLET LÄGE-------- */
   /* --------TABLET LÄGE SLUT-------- */
   /* --------DESKTOPLÄGE-------- */
